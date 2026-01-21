@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My To Do List</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header + Composer Card -->
+    <div class="input-container">
+      <h1>My To Do List</h1>
+      <div class="datetime" id="dateTime"></div>
+
+      <!-- Task Composer -->
+      <div class="composer">
+        <input
+          type="text"
+          id="inputBox"
+          placeholder="What are you working on today?"
+        />
+
+        <!-- Deadline + Priority -->
+        <div class="row">
+          <input type="datetime-local" id="deadlineInput" />
+          <select id="priorityInput">
+            <option value="" disabled selected>Priority</option>
+            <option value="high">High Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="low">Low Priority</option>
+          </select>
+        </div>
+
+        <input type="button" value="Add Task" id="addBtn" />
+      </div>
+
+      <!-- Productivity -->
+      <div class="productivity">
+        <span>Today's Productivity</span>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress-wrapper">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+    </div>
+
+    <!-- Todo List -->
+    <ul class="todolist" id="todoList"></ul>
+
+  </div>
+
+  <script src="assets/app.js"></script>
+
+</body>
+</html>
